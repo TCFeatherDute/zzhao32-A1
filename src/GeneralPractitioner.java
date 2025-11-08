@@ -1,6 +1,5 @@
 //File: GeneralPractitioner.java
 //Description: Subclass (General Practitioner), inherits from HealthProfessional
-//Dependency: Must be in the same package as HealthProfessional class (or import the corresponding package)
 
 public class GeneralPractitioner extends HealthProfessional {
 
