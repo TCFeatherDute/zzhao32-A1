@@ -12,7 +12,7 @@ public class AssignmentOne {
     //Program entry method
     public static void main(String[] args) {
         //Demonstrate the creation and use of health professional subclasses
-        System.out.println("===== Using classes and objects =====");
+        System.out.println("===== Part 3 - Using classes and objects =====");
 
         //Create 3 general practitioner objects to show the use of different constructors and setters
         GeneralPractitioner gp1 = new GeneralPractitioner(1001, "Dr. xiaohong", 101, true);
@@ -45,7 +45,7 @@ public class AssignmentOne {
         System.out.println("------------------------------");
 
         //Demonstrate the reservation management function, combining ArrayList and polymorphism features
-        System.out.println("\n===== Appointment Management =====");
+        System.out.println("\n===== Part 5 - Appointment Management =====");
         System.out.println("------------------------------");
 
         //Create 4 appointments and assign them to general practitioners and pediatricians respectively (polymorphism: sub class objects are assigned to parent class references)
