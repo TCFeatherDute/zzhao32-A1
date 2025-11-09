@@ -126,7 +126,7 @@ public class AssignmentOne {
         //Cancel the appointment according to the patient's mobile number
         //@param mobile
     public static void cancelBooking(String mobile) {
-        // 校验手机号参数有效性
+        //Verify the validity of phone number parameters
         if (mobile == null || mobile.isBlank()) {
             System.out.println("Invalid mobile number: cannot be empty.");
             return;
