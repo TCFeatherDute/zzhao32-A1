@@ -44,7 +44,6 @@ public class AssignmentOne {
 
         System.out.println("------------------------------");
 
-
         //Demonstrate the reservation management function, combining ArrayList and polymorphism features
         System.out.println("\n===== Appointment Management =====");
         System.out.println("------------------------------");
@@ -107,7 +106,6 @@ public class AssignmentOne {
                 doctor.getName(),
                 timeSlot);
     }
-
 
         //Print all current appointment records
         //If the set is empty, there is no reservation; Otherwise, print reservation details one by one
