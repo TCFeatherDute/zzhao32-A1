@@ -67,3 +67,43 @@ public class AssignmentOne {
         System.out.println("\n--- Appointments After Cancellation ---");
         printExistingAppointments();
     }
+
+    //Create an appointment and add it to the collection
+    //@param patientName
+    //@param patientMobile
+    //@param timeSlot
+    //@param doctor
+
+    public static void createAppointment(String patientName,
+                                         String patientMobile,
+                                         String timeSlot,
+                                         HealthProfessional doctor) {
+        //Strict parameter verification
+        if (patientName == null || patientName.isBlank()) {
+            System.out.println("Failed to create appointment: patient name cannot be empty.");
+            return;
+        }
+        if (patientMobile == null || patientMobile.isBlank()) {
+            System.out.println("Failed to create appointment: patient mobile cannot be empty.");
+            return;
+        }
+        if (timeSlot == null || timeSlot.isBlank()) {
+            System.out.println("Failed to create appointment: time slot cannot be empty.");
+            return;
+        }
+        if (doctor == null) {
+            System.out.println("Failed to create appointment: doctor cannot be null.");
+            return;
+        }
+
+        //Create an appointment object and add it to the static collection
+        Appointment appointment = new Appointment(patientName, patientMobile, timeSlot, doctor);
+        appointments.add(appointment);
+
+        //Output appointment success prompt, and obtain specific types of doctors through polymorphism
+        System.out.printf("Created appointment for %s with %s %s at %s%n",
+                patientName,
+                doctor.getClass().getSimpleName(),
+                doctor.getName(),
+                timeSlot);
+    }
