@@ -73,4 +73,23 @@ public class Appointment {
             System.out.println("Doctor: Not Assigned");
         }
     }
+    //Override toString method
+    @Override
+    public String toString() {
+        String doctorInfo;
+        //Judge whether the doctor is assigned
+        if (doctor == null) {
+            doctorInfo = "No doctor assigned";
+        } else {
+            doctorInfo = doctor.getClass().getSimpleName()
+                    + " " + doctor.getName()
+                    + " (Room " + doctor.getRoomNumber() + ")";
+        }
+
+        return "Appointment [patientName=" + patientName
+                + ", patientMobile=" + patientMobile
+                + ", timeSlot=" + timeSlot
+                + ", doctor=" + doctorInfo
+                + "]";
+    }
 }
