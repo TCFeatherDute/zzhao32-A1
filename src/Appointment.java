@@ -73,6 +73,7 @@ public class Appointment {
             System.out.println("Doctor: Not Assigned");
         }
     }
+
     //Override toString method
     @Override
     public String toString() {
