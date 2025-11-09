@@ -26,4 +26,51 @@ public class Appointment {
         this.doctor = doctor;
         this.timeSlot = timeSlot;
     }
+
+
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
+    public String getPatientMobile() {
+        return patientMobile;
+    }
+
+    public void setPatientMobile(String patientMobile) {
+        this.patientMobile = patientMobile;
+    }
+
+    public String getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(String timeSlot) {
+        this.timeSlot = timeSlot;
+    }
+
+    public HealthProfessional getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(HealthProfessional doctor) {
+        this.doctor = doctor;
+    }
+
+    public void printDetails() {
+        System.out.println("Patient Name: " + patientName);
+        System.out.println("Patient Mobile: " + patientMobile);
+        System.out.println("Time Slot: " + timeSlot);
+
+        if (doctor != null) {
+            System.out.println("Doctor Type: " + doctor.getClass().getSimpleName());
+            System.out.println("Doctor Name: " + doctor.getName());
+            System.out.println("Doctor Room: " + doctor.getRoomNumber());
+        } else {
+            System.out.println("Doctor: Not Assigned");
+        }
+    }
 }
