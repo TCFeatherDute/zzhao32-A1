@@ -35,3 +35,35 @@ public class AssignmentOne {
         System.out.println("------------------------------");
         gp3.printDetails();
         System.out.println("------------------------------");
+
+        //Print all pediatrician information
+        System.out.println("\n--- Paediatricians ---");
+        p1.printDetails();
+        System.out.println("------------------------------");
+        p2.printDetails();
+
+        System.out.println("------------------------------");
+
+
+        //Demonstrate the reservation management function, combining ArrayList and polymorphism features
+        System.out.println("\n===== Appointment Management =====");
+        System.out.println("------------------------------");
+
+        //Create 4 appointments and assign them to general practitioners and pediatricians respectively (polymorphism: sub class objects are assigned to parent class references)
+        createAppointment("Dwight", "0000000001", "07:00", gp1);
+        createAppointment("Lion", "0000000002", "08:00", gp2);
+        createAppointment("Bill", "0000000003", "09:00", p1);
+        createAppointment("Tom", "0000000004", "10:00", p2);
+
+        //Print all currently valid appointments
+        System.out.println("\n--- Existing Appointments ---");
+        printExistingAppointments();
+
+        //Cancel the appointment according to the mobile number
+        System.out.println("\n--- Cancel one booking (by mobile) ---");
+        cancelBooking("0000000002");
+
+        //Print the cancelled appointment list and verify the cancellation function
+        System.out.println("\n--- Appointments After Cancellation ---");
+        printExistingAppointments();
+    }
