@@ -86,7 +86,6 @@ public class Appointment {
                     + " " + doctor.getName()
                     + " (Room " + doctor.getRoomNumber() + ")";
         }
-
         return "Appointment [patientName=" + patientName
                 + ", patientMobile=" + patientMobile
                 + ", timeSlot=" + timeSlot
