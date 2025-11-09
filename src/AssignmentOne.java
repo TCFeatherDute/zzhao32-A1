@@ -107,3 +107,50 @@ public class AssignmentOne {
                 doctor.getName(),
                 timeSlot);
     }
+
+
+        //Print all current appointment records
+        //If the set is empty, there is no reservation; Otherwise, print reservation details one by one
+
+    public static void printExistingAppointments() {
+        if (appointments.isEmpty()) {
+            System.out.println("No existing appointments.");
+            return;
+        }
+
+        //Enhanced for loop traversal of collections
+        for (Appointment appointment : appointments) {
+            System.out.println("------------------------------");
+            appointment.printDetails();
+        }
+    }
+
+        //Cancel the appointment according to the patient's mobile number
+        //@param mobile
+    public static void cancelBooking(String mobile) {
+        // 校验手机号参数有效性
+        if (mobile == null || mobile.isBlank()) {
+            System.out.println("Invalid mobile number: cannot be empty.");
+            return;
+        }
+
+        boolean isCancelled = false;
+        //Index traverses the collection, which is easy to delete after finding the target
+        for (int i = 0; i < appointments.size(); i++) {
+            Appointment appointment = appointments.get(i);
+            //Match mobile phone number
+            if (mobile.equals(appointment.getPatientMobile())) {
+                appointments.remove(i);
+                System.out.println("Appointment for mobile " + mobile + " has been cancelled.");
+                isCancelled = true;
+                break;
+                //Cancel only the first matching record to avoid repeated cancellation
+            }
+        }
+
+        //Prompt when no matching appointment is found
+        if (!isCancelled) {
+            System.out.println("No appointment found for mobile: " + mobile);
+        }
+    }
+}
